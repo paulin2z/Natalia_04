@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Painel Secreto{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Respostas da Minha Namorada 💕</h2>
+    <p class="frase">Aqui estão todas as lembranças salvas:</p>
+
+    <table class="respostas-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Pergunta</th>
+                <th>Resposta</th>
+                <th>Data (evento)</th>
+                <th>Local</th>
+                <th>Respondido em</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for r in respostas %}
+            <tr>
+                <td>{{ r[0] }}</td>
+                <td>{{ r[1] }}</td>
+                <td>{{ r[2] or '-' }}</td>
+                <td>{{ r[3] or '-' }}</td>
+                <td>{{ r[4] or '-' }}</td>
+                <td>{{ r[5] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="acao-botoes">
+        <a class="btn" href="/">Voltar 💘</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Nosso Amor{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script defer src="/static/script.js"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header class="top-area">
+        <div class="contador-coração">
+            <div class="coração">
+                <div class="heart">❤</div>
+                <div class="counter-line">
+                    <div id="contador-text">Carregando...</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>Feito com carinho 💘</p>
+    </footer>
+</body>
+</html>
