@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block title %}Quiz do Amor{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Quiz do Nosso Amor 💘</h2>
+    <p class="frase">Responda com carinho — cada memória é importante ✨</p>
+
+    <form method="POST" class="quiz-form">
+
+        <!-- 1 - Primeiro beijo -->
+        <div class="card pergunta-card">
+            <label class="pergunta-titulo">💋 Nosso primeiro beijo</label>
+            <input type="hidden" name="primeiro_beijo_label" value="Nosso primeiro beijo">
+            <div class="linha">
+                <input type="date" name="primeiro_beijo_date" required>
+                <input type="text" name="primeiro_beijo_local" placeholder="Onde foi?" required>
+            </div>
+        </div>
+
+        <!-- 2 - Data oficial namoro -->
+        <div class="card pergunta-card">
+            <label class="pergunta-titulo">📅 Data oficial de namoro</label>
+            <input type="hidden" name="data_namoro_label" value="Data oficial de namoro">
+            <div class="linha">
+                <input type="date" name="data_namoro_date" required>
+                <input type="text" name="data_namoro_local" placeholder="Onde comemoramos?" required>
+            </div>
+        </div>
+
+        <!-- 3 - Segredo pro mundo -->
+        <div class="card pergunta-card">
+            <label class="pergunta-titulo">🤫 Quando contamos nosso “segredo”</label>
+            <input type="hidden" name="segredo_label" value="Quando contamos nosso segredo">
+            <div class="linha">
+                <input type="date" name="segredo_date" required>
+                <input type="text" name="segredo_local" placeholder="Onde / contexto" required>
+            </div>
+        </div>
+
+        <!-- 5 - Primeiro rolê -->
+        <div class="card pergunta-card">
+            <label class="pergunta-titulo">🚶‍♀️ Nosso primeiro rolê juntos</label>
+            <input type="hidden" name="primeiro_rolê_label" value="Primeiro rolê juntos">
+            <div class="linha">
+                <input type="date" name="primeiro_rolê_date" required>
+                <input type="text" name="primeiro_rolê_local" placeholder="Onde fomos?" required>
+            </div>
+        </div>
+
+        <!-- 6 - Primeiro presente -->
+        <div class="card pergunta-card">
+            <label class="pergunta-titulo">🎁 Quando te dei seu primeiro presente</label>
+            <input type="hidden" name="primeiro_presente_label" value="Primeiro presente">
+            <div class="linha">
+                <input type="date" name="primeiro_presente_date" required>
+                <input type="text" name="primeiro_presente_local" placeholder="Qual ocasião?" required>
+            </div>
+        </div>
+
+        <!-- 7 - Primeiro momento íntimo (delicado) -->
+        <div class="card pergunta-card">
+            <label class="pergunta-titulo">💕 Nosso primeiro momento íntimo</label>
+            <input type="hidden" name="primeiro_intimo_label" value="Primeiro momento íntimo">
+            <div class="linha">
+                <input type="date" name="primeiro_intimo_date" required>
+                <input type="text" name="primeiro_intimo_local" placeholder="Lugar (opcional)" >
+            </div>
+        </div>
+
+        <!-- 8 - O que mais ama em você -->
+        <div class="card pergunta-card">
+            <label class="pergunta-titulo">❤️ O que você mais ama em mim?</label>
+            <input type="hidden" name="o_que_ama_label" value="O que mais ama em mim">
+            <textarea name="o_que_ama" rows="3" placeholder="Escreva com carinho..." required></textarea>
+        </div>
+
+        <!-- 9 - Melhor rolê -->
+        <div class="card pergunta-card">
+            <label class="pergunta-titulo">🌙 Qual foi nosso melhor rolê até agora?</label>
+            <input type="hidden" name="melhor_rolê_label" value="Melhor rolê">
+            <textarea name="melhor_rolê" rows="2" placeholder="Qual momento foi inesquecível?" required></textarea>
+        </div>
+
+        <!-- 10 - Promessa -->
+        <div class="card pergunta-card">
+            <label class="pergunta-titulo">✨ Faça uma promessa para nosso futuro</label>
+            <input type="hidden" name="promessa_label" value="Promessa para o futuro">
+            <textarea name="promessa" rows="3" placeholder="Promessa..." required></textarea>
+        </div>
+
+        <!-- 11 - Música -->
+        <div class="card pergunta-card">
+            <label class="pergunta-titulo">🎶 Uma música que te lembra a gente</label>
+            <input type="hidden" name="musica_label" value="Música que lembra a gente">
+            <input type="text" name="musica" placeholder="Nome da música / artista" required>
+        </div>
+
+        <!-- 12 - Apelido -->
+        <div class="card pergunta-card">
+            <label class="pergunta-titulo">😳 Apelido carinhoso que você gosta de me chamar</label>
+            <input type="hidden" name="apelido_label" value="Apelido carinhoso">
+            <input type="text" name="apelido" placeholder="Ex: amor, lindo..." required>
+        </div>
+
+        <!-- 13 - Mensagem especial -->
+        <div class="card pergunta-card">
+            <label class="pergunta-titulo">💌 Escreva uma mensagem especial pra mim agora</label>
+            <input type="hidden" name="mensagem_label" value="Mensagem especial">
+            <textarea name="mensagem" rows="4" placeholder="Diga algo do coração..." required></textarea>
+        </div>
+
+        <div class="acao-botoes">
+            <button type="submit" class="btn">Enviar com muito amor 💌</button>
+        </div>
+
+    </form>
+</div>
+{% endblock %}
