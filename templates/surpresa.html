@@ -1,18 +1,33 @@
-{% extends "base.html" %}
-{% block title %}Surpresa Final{% endblock %}
-{% block content %}
-<div class="container surprise-container">
-    <div class="anim-corações">❤️&nbsp;💗&nbsp;💕</div>
-    <h1>Eu te amo, meu amor! 😍</h1>
-    <p class="frase">Obrigado por cada momento — Você me faz me sentir a minha melhor versão.</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎉 Surpresa! 🎉</h1>
+    </header>
 
-    <div class="surpresa-text">
-        <p>Esse presente foi feito pensando em nós. Lembra pra sempre que sou doido por você.</p>
+    <div class="container surpresa">
+        <p>Parabéns, meu amor! Cada resposta sua me faz lembrar do quanto te amo 💖</p>
+        <p>Estamos juntos há <span id="contador"></span></p>
+        <a href="/"><button>Voltar para o início 💌</button></a>
     </div>
 
-    <div class="acao-botoes">
-        <a class="btn" href="/">Voltar ao início 🌹</a>
-        <a class="btn outline" href="/respostas">Ver respostas (pra paulinho) 🔐</a>
-    </div>
-</div>
-{% endblock %}
+    <script>
+        // Contador de tempo juntos em meses e dias
+        const dataInicio = new Date("2025-03-04"); // data do primeiro beijo
+        const hoje = new Date();
+
+        const diffTime = Math.abs(hoje - dataInicio);
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        const months = Math.floor(diffDays / 30);
+        const days = diffDays % 30;
+
+        document.getElementById("contador").innerText = `${months} meses e ${days} dias juntos ❤️`;
+    </script>
+</body>
+</html>
